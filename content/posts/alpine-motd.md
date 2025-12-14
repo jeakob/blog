@@ -1,7 +1,12 @@
+---
+title: "MOTD/Login Banner"
+date: 2025-12-14T10:00:00-07:00
+---
+
 # MOTD/Login Banner
 Example:
 
-<img src="/content/MOTDLogin Banner_image.png" width="669" height="196">
+<img src="/MOTDLogin Banner_image.png" width="669" height="196">
 
 ```
 # Start blue
