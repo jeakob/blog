@@ -1,6 +1,8 @@
 ---
-title: "MOTD/Login Banner"
+title: "Alpine MOTD/Login Banner"
 date: 2025-12-14T10:00:00-07:00
+tags: ["alpine", "motd"]
+draft: false
 ---
 
 # MOTD/Login Banner
