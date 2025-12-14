@@ -8,7 +8,7 @@ draft: false
 # MOTD/Login Banner
 Example:
 
-<img src="/motd-login-banner.png" width="669" height="196">
+<img src="/blog/motd-login-banner.png" width="669" height="196">
 
 ```
 # Start blue
