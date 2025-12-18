@@ -21,4 +21,6 @@ echo -en &amp;#34;\033[1;31m&amp;#34; &amp;gt;&amp;gt; /etc/motd
 echo &amp;#34;All files are stored here: cd /root/&amp;#34; &amp;gt;&amp;gt; /etc/motd
 # Reset to default
 echo -en &amp;#34;\033[0m&amp;#34; &amp;gt;&amp;gt; /etc/motd
-&lt;/code>&lt;/pre></description></item></channel></rss>
+&lt;/code>&lt;/pre></description></item><item><title>Useful Sites</title><link>https://jeakob.github.io/blog/posts/useful-sites/</link><pubDate>Sun, 14 Dec 2025 10:00:00 -0700</pubDate><guid>https://jeakob.github.io/blog/posts/useful-sites/</guid><description>&lt;h1 id="a-list-of-useful-sites-that-i-have-come-across">A list of useful sites that I have come across:&lt;/h1>
+&lt;p>&lt;a href="https://networking-toolbox.as93.net">Networking Toolsbox:&lt;/a>&lt;/p>
+&lt;img src="https://jeakob.github.io/blog/networking-toolbox.png" width="669" height="196"></description></item></channel></rss>
