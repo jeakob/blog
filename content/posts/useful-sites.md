@@ -1,7 +1,7 @@
 ---
 title: "Useful Sites"
 date: 2025-12-18T22:00:00-07:00
-tags: ["alpine", "motd"]
+tags: ["web"]
 draft: false
 ---
 
