@@ -9,4 +9,4 @@ draft: false
 
 [Networking Toolbox:](https://networking-toolbox.as93.net)
 
-<img src="/blog/networking-toolbox.png" width="669" height="196">
+<img src="/blog/networking-toolbox.png" width="1267" height="879">
