@@ -33,6 +33,6 @@
 &lt;p>The main drawback is that if you add additional internal drives later, you’ll need to update the boot loader with the new address. If you forget, you can always boot from the FreeBSD installer and drop to a shell to update it again. In practice, though, most people already have all the drive bays populated, which is largely the point of these small systems.&lt;/p>
 &lt;p>If your MicroServer still refuses to boot—as one of mine did—try connecting the bootable USB stick to one of the external USB 2.0 ports instead. One of my units may have a flaky internal port, but this workaround worked fine on another system here, as well as on the unit I keep at my dad’s place, which I’ve just realised I forgot to include in my homelab post.&lt;/p>
 &lt;h3 id="boot-screenshot">Boot Screenshot:&lt;/h3>
-&lt;figure class="image">&lt;img style="aspect-ratio:1047/661;" src="https://jeakob.github.io/blog/4_FreeBSD_image.png" width="1200" height="661">&lt;/figure>
+&lt;figure class="image">&lt;img style="aspect-ratio:1200/661;" src="https://jeakob.github.io/blog/4_FreeBSD_image.png" width="1200" height="661">&lt;/figure>
 &lt;h4 id="after-a-couple-of-seconds-you-will-see-grub">After a couple of seconds, you will see GRUB:&lt;/h4>
 &lt;figure class="image">&lt;img style="aspect-ratio:1046/650;" src="https://jeakob.github.io/blog/FreeBSD_image.png" width="1200" height="650">&lt;/figure></description></item></channel></rss>
