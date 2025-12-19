@@ -17,7 +17,8 @@ This guide explains how to install FreeBSD on external boot media that the HP Mi
 
 > **Note:** I recommend installing FreeBSD on the internal USB or microSD card.
 
-<figure class="image"><img style="aspect-ratio:807/499;" src="/blog/1_FreeBSD_image.png" width="1200" height="499"></figure><figure class="image"><img style="aspect-ratio:802/653;" src="/blog/2_FreeBSD_image.png" width="1200" height="653"></figure>
+<img src="/blog/1_FreeBSD_image.png" width="1200" height="196">
+<img src="/blog/2_FreeBSD_image.png" width="1200" height="196">
 
 <figure class="image"><img style="aspect-ratio:354/245;" src="/blog/3_FreeBSD_image.png" width="354" height="245"></figure>
 
