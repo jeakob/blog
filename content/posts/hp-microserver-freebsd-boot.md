@@ -17,7 +17,7 @@ This guide explains how to install FreeBSD on external boot media that the HP Mi
 
 > **Note:** I recommend installing FreeBSD on the internal USB or microSD card.
 
-<figure class="image"><img style="aspect-ratio:807/499;" src="/blog/1_FreeBSD_image.png" width="807" height="499"></figure><figure class="image"><img style="aspect-ratio:802/653;" src="/blog/2_FreeBSD_image.png" width="802" height="653"></figure>
+<figure class="image"><img style="aspect-ratio:807/499;" src="/blog/1_FreeBSD_image.png" width="1200" height="499"></figure><figure class="image"><img style="aspect-ratio:802/653;" src="/blog/2_FreeBSD_image.png" width="1200" height="653"></figure>
 
 <figure class="image"><img style="aspect-ratio:354/245;" src="/blog/3_FreeBSD_image.png" width="354" height="245"></figure>
 
@@ -70,8 +70,8 @@ If your MicroServer still refuses to boot—as one of mine did—try connecting 
 
 ### Boot Screenshot:
 
-<figure class="image"><img style="aspect-ratio:1047/661;" src="/blog/4_FreeBSD_image.png" width="1047" height="661"></figure>
+<figure class="image"><img style="aspect-ratio:1047/661;" src="/blog/4_FreeBSD_image.png" width="1200" height="661"></figure>
 
 #### After a couple of seconds, you will see GRUB:
 
-<figure class="image"><img style="aspect-ratio:1046/650;" src="/blog/FreeBSD_image.png" width="1046" height="650"></figure>
+<figure class="image"><img style="aspect-ratio:1046/650;" src="/blog/FreeBSD_image.png" width="1200" height="650"></figure>
