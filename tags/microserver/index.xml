@@ -9,12 +9,12 @@
 &lt;figure class="image">&lt;img style="aspect-ratio:807/499;" src="https://jeakob.github.io/blog/1_FreeBSD_image.png" width="807" height="499">&lt;/figure>&lt;figure class="image">&lt;img style="aspect-ratio:802/653;" src="https://jeakob.github.io/blog/2_FreeBSD_image.png" width="802" height="653">&lt;/figure>
 &lt;figure class="image">&lt;img style="aspect-ratio:354/245;" src="https://jeakob.github.io/blog/3_FreeBSD_image.png" width="354" height="245">&lt;/figure>
 &lt;p>After installing FreeBSD but before restarting, drop to a shell when offered to. Assuming your new boot key is &lt;code>da1&lt;/code>, clear whatever partitions you have first, then format it:&lt;/p>
-&lt;div class="highlight">&lt;pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;">&lt;code class="language-sh" data-lang="sh">&lt;span style="display:flex;">&lt;span>&lt;span style="color:#75715e"># gpart destroy -F da1&lt;/span>
-&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span>&lt;span style="color:#75715e"># gpart create -s GPT da1&lt;/span>
+&lt;div class="highlight">&lt;pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;">&lt;code class="language-sh" data-lang="sh">&lt;span style="display:flex;">&lt;span>gpart destroy -F da1
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span>gpart create -s GPT da1
 &lt;/span>&lt;/span>&lt;/code>&lt;/pre>&lt;/div>&lt;h3 id="install-the-bootloader">Install the bootloader:&lt;/h3>
-&lt;div class="highlight">&lt;pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;">&lt;code class="language-sh" data-lang="sh">&lt;span style="display:flex;">&lt;span>&lt;span style="color:#75715e"># gpart bootcode -b /boot/boot0 da1&lt;/span>
+&lt;div class="highlight">&lt;pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;">&lt;code class="language-sh" data-lang="sh">&lt;span style="display:flex;">&lt;span>gpart bootcode -b /boot/boot0 da1
 &lt;/span>&lt;/span>&lt;/code>&lt;/pre>&lt;/div>&lt;p>Assuming all four LFF drive bays are populated, configure the bootloader to use the fifth drive (the SSD) and set it as the default boot option:&lt;/p>
-&lt;div class="highlight">&lt;pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;">&lt;code class="language-sh" data-lang="sh">&lt;span style="display:flex;">&lt;span>&lt;span style="color:#75715e"># boot0cfg -Bv -o setdrv -d 0x84 -s 5 da1&lt;/span>
+&lt;div class="highlight">&lt;pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;">&lt;code class="language-sh" data-lang="sh">&lt;span style="display:flex;">&lt;span>boot0cfg -Bv -o setdrv -d 0x84 -s &lt;span style="color:#ae81ff">5&lt;/span> da1
 &lt;/span>&lt;/span>&lt;/code>&lt;/pre>&lt;/div>&lt;p>&lt;code>0x84&lt;/code> refers to the fifth BIOS drive. Use these if you have others:&lt;/p>
 &lt;ul>
 &lt;li>&lt;code>0x80&lt;/code> – for just the SSD (though I suppose that’s redundant)&lt;/li>
