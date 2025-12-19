@@ -7,7 +7,7 @@ draft: false
 
 ## The Problem
 
-The HP MicroServer Gen8 has limited and inflexible boot options. In many configurations, it cannot reliably boot an operating system directly from certain internal drives (most commonly SSDs installed in the optical bay or via internal ports). As a result, the system may fail to start even though the OS is installed correctly and the hardware is otherwise functional.
+The HP MicroServer Gen8 has limited and inflexible boot options. In many configurations, it cannot reliably boot an operating system directly from certain internal drives (most commonly SSDs installed in the optical bay or via internal ports). As a result, the system may fail to start even though the OS is installed correctly and the hardware is otherwise functional. This allowed me to install TrueNAS Scale on an SSD plugged into the internal SATA port.
 
 ## The Solution
 
@@ -27,7 +27,7 @@ Select where you would like install FreeBSD
   <img src="/blog/3_FreeBSD_image.png" width="354" height="245">
 </figure>
 
-After installing FreeBSD but before restarting, drop to a shell when offered to. Assuming your new boot key is `da1`, clear whatever partitions you have first, then format it:
+After installing FreeBSD, the installer will offer to drop you into a shell before rebooting. Accept this option. Once in the shell, you'll need to prepare your boot drive. In this example, we're using `da1` as the boot drive - adjust this if your drive has a different identifier. First, destroy any existing partitions, then create a fresh GPT partition table:
 
 ```sh
 gpart destroy -F da1
