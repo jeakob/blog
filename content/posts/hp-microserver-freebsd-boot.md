@@ -13,14 +13,16 @@ The HP MicroServer Gen8 has limited and inflexible boot options. In many configu
 
 This guide explains how to install FreeBSD on external boot media that the HP MicroServer Gen8 can load at startup. Once loaded, the FreeBSD bootloader is used to select a configured internal drive—typically an SSD, which then boots the operating system of your choice.
 
-> **Tip:** It’s best to unplug all hard drives first.
+> **Tip:** It’s best to unplug all hard drives first. I recommend installing FreeBSD on the internal USB or microSD card.
 
-> **Note:** I recommend installing FreeBSD on the internal USB or microSD card.
+Press Enter
+<img src="/blog/1_FreeBSD_image.png" width="1200" height="650">
 
-<img src="/blog/1_FreeBSD_image.png" width="1200" height="196">
-<img src="/blog/2_FreeBSD_image.png" width="1200" height="196">
+Press Enter again
+<img src="/blog/2_FreeBSD_image.png" width="1200" height="650">
 
-<figure class="image"><img style="aspect-ratio:354/245;" src="/blog/3_FreeBSD_image.png" width="354" height="245"></figure>
+Select where you would like install FreeBSD
+<img src="/blog/3_FreeBSD_image.png" width="354" height="245">
 
 After installing FreeBSD but before restarting, drop to a shell when offered to. Assuming your new boot key is `da1`, clear whatever partitions you have first, then format it:
 
@@ -71,8 +73,8 @@ If your MicroServer still refuses to boot—as one of mine did—try connecting 
 
 ### Boot Screenshot:
 
-<figure class="image"><img style="aspect-ratio:1200/661;" src="/blog/4_FreeBSD_image.png" width="1200" height="661"></figure>
+<img src="/blog/4_FreeBSD_image.png" width="1200" height="650">
+
 
 #### After a couple of seconds, you will see GRUB:
-
-<figure class="image"><img style="aspect-ratio:1046/650;" src="/blog/FreeBSD_image.png" width="1200" height="650"></figure>
+<img src="/blog/FreeBSD_image.png" width="1200" height="650">
