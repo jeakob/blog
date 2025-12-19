@@ -3,20 +3,18 @@
 &lt;h2 id="the-solution">The Solution&lt;/h2>
 &lt;p>This guide explains how to install FreeBSD on external boot media that the HP MicroServer Gen8 can load at startup. Once loaded, the FreeBSD bootloader is used to select a configured internal drive—typically an SSD, which then boots the operating system of your choice.&lt;/p>
 &lt;blockquote>
-&lt;p>[!TIP]
-It&amp;rsquo;s best to unplug all hard drives first&lt;/p>&lt;/blockquote>
+&lt;p>&lt;strong>Tip:&lt;/strong> It’s best to unplug all hard drives first.&lt;/p>&lt;/blockquote>
 &lt;blockquote>
-&lt;p>[!NOTE]
-I recommend to install FreeBSD on the internal USB or micro SD card&lt;/p>&lt;/blockquote>
+&lt;p>&lt;strong>Note:&lt;/strong> I recommend installing FreeBSD on the internal USB or microSD card.&lt;/p>&lt;/blockquote>
 &lt;figure class="image">&lt;img style="aspect-ratio:807/499;" src="https://jeakob.github.io/blog/1_FreeBSD_image.png" width="807" height="499">&lt;/figure>&lt;figure class="image">&lt;img style="aspect-ratio:802/653;" src="https://jeakob.github.io/blog/2_FreeBSD_image.png" width="802" height="653">&lt;/figure>
 &lt;figure class="image">&lt;img style="aspect-ratio:354/245;" src="https://jeakob.github.io/blog/3_FreeBSD_image.png" width="354" height="245">&lt;/figure>
 &lt;p>After installing FreeBSD but before restarting, drop to a shell when offered to. Assuming your new boot key is &lt;code>da1&lt;/code>, clear whatever partitions you have first, then format it:&lt;/p>
-&lt;div class="highlight">&lt;pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;">&lt;code class="language-plain" data-lang="plain">&lt;span style="display:flex;">&lt;span># gpart destroy -F da1
-&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span># gpart create -s GPT da1
+&lt;div class="highlight">&lt;pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;">&lt;code class="language-sh" data-lang="sh">&lt;span style="display:flex;">&lt;span>&lt;span style="color:#75715e"># gpart destroy -F da1&lt;/span>
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span>&lt;span style="color:#75715e"># gpart create -s GPT da1&lt;/span>
 &lt;/span>&lt;/span>&lt;/code>&lt;/pre>&lt;/div>&lt;h3 id="install-the-bootloader">Install the bootloader:&lt;/h3>
-&lt;div class="highlight">&lt;pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;">&lt;code class="language-plain" data-lang="plain">&lt;span style="display:flex;">&lt;span># gpart bootcode -b /boot/boot0 da1
+&lt;div class="highlight">&lt;pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;">&lt;code class="language-sh" data-lang="sh">&lt;span style="display:flex;">&lt;span>&lt;span style="color:#75715e"># gpart bootcode -b /boot/boot0 da1&lt;/span>
 &lt;/span>&lt;/span>&lt;/code>&lt;/pre>&lt;/div>&lt;p>Assuming all four LFF drive bays are populated, configure the bootloader to use the fifth drive (the SSD) and set it as the default boot option:&lt;/p>
-&lt;div class="highlight">&lt;pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;">&lt;code class="language-plain" data-lang="plain">&lt;span style="display:flex;">&lt;span># boot0cfg -Bv -o setdrv -d 0x84 -s 5 da1
+&lt;div class="highlight">&lt;pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;">&lt;code class="language-sh" data-lang="sh">&lt;span style="display:flex;">&lt;span>&lt;span style="color:#75715e"># boot0cfg -Bv -o setdrv -d 0x84 -s 5 da1&lt;/span>
 &lt;/span>&lt;/span>&lt;/code>&lt;/pre>&lt;/div>&lt;p>&lt;code>0x84&lt;/code> refers to the fifth BIOS drive. Use these if you have others:&lt;/p>
 &lt;ul>
 &lt;li>&lt;code>0x80&lt;/code> – for just the SSD (though I suppose that’s redundant)&lt;/li>
@@ -26,11 +24,11 @@ I recommend to install FreeBSD on the internal USB or micro SD card&lt;/p>&lt;/b
 &lt;li>&lt;code>0x84&lt;/code> – all four other drives installed&lt;/li>
 &lt;/ul>
 &lt;p>The flags are:&lt;/p>
-&lt;div class="highlight">&lt;pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;">&lt;code class="language-plain" data-lang="plain">&lt;span style="display:flex;">&lt;span>-B install FreeBSD&amp;#39;s boot0 manager
+&lt;div class="highlight">&lt;pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;">&lt;code class="language-sh" data-lang="sh">&lt;span style="display:flex;">&lt;span>-B install FreeBSD&lt;span style="color:#960050;background-color:#1e0010">&amp;#39;&lt;/span>s boot0 manager
 &lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span>-v like my blog, be verbose
 &lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span>-o setdrv refer to the disk by BIOS drive number
 &lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span>-d BIOS drive number
-&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span>-s 5 boot from second disk; in this case the SSD 
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span>-s &lt;span style="color:#ae81ff">5&lt;/span> boot from second disk; in this &lt;span style="color:#66d9ef">case&lt;/span> the SSD 
 &lt;/span>&lt;/span>&lt;/code>&lt;/pre>&lt;/div>&lt;p>There are several ways to approach this, but this method has been reliable for me for years.&lt;/p>
 &lt;p>The main drawback is that if you add additional internal drives later, you’ll need to update the boot loader with the new address. If you forget, you can always boot from the FreeBSD installer and drop to a shell to update it again. In practice, though, most people already have all the drive bays populated, which is largely the point of these small systems.&lt;/p>
 &lt;p>If your MicroServer still refuses to boot—as one of mine did—try connecting the bootable USB stick to one of the external USB 2.0 ports instead. One of my units may have a flaky internal port, but this workaround worked fine on another system here, as well as on the unit I keep at my dad’s place, which I’ve just realised I forgot to include in my homelab post.&lt;/p>
