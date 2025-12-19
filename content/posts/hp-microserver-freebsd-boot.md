@@ -24,22 +24,22 @@ This guide explains how to install FreeBSD on external boot media that the HP Mi
 After installing FreeBSD but before restarting, drop to a shell when offered to. Assuming your new boot key is `da1`, clear whatever partitions you have first, then format it:
 
 ```sh
-# gpart destroy -F da1
-# gpart create -s GPT da1
+gpart destroy -F da1
+gpart create -s GPT da1
 
 ```
 
 ### Install the bootloader:
 
 ```sh
-# gpart bootcode -b /boot/boot0 da1
+gpart bootcode -b /boot/boot0 da1
 
 ```
 
 Assuming all four LFF drive bays are populated, configure the bootloader to use the fifth drive (the SSD) and set it as the default boot option:
 
 ```sh
-# boot0cfg -Bv -o setdrv -d 0x84 -s 5 da1
+boot0cfg -Bv -o setdrv -d 0x84 -s 5 da1
 
 ```
 
