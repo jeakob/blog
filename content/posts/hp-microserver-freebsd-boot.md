@@ -22,7 +22,10 @@ Press Enter again
 <img src="/blog/2_FreeBSD_image.png" width="1200" height="650">
 
 Select where you would like install FreeBSD
-<img src="/blog/3_FreeBSD_image.png" width="354" height="245">
+
+<figure class="image">
+  <img src="/blog/3_FreeBSD_image.png" width="354" height="245">
+</figure>
 
 After installing FreeBSD but before restarting, drop to a shell when offered to. Assuming your new boot key is `da1`, clear whatever partitions you have first, then format it:
 
