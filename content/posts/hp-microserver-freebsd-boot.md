@@ -1,7 +1,7 @@
 ---
 title: "HP Microserver Gen 8 - FreeBSD Bootloader"
 date: 2025-12-19T21:08:00+00:00
-tags: ["hp", "microserver", "freebsd"]
+tags: ["hp", "microserver", "freebsd", "truenas"]
 draft: false
 ---
 
