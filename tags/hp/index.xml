@@ -8,8 +8,10 @@
 &lt;img src="https://jeakob.github.io/blog/1_FreeBSD_image.png" width="1200" height="650">&lt;/p>
 &lt;p>Press Enter again
 &lt;img src="https://jeakob.github.io/blog/2_FreeBSD_image.png" width="1200" height="650">&lt;/p>
-&lt;p>Select where you would like install FreeBSD
-&lt;img src="https://jeakob.github.io/blog/3_FreeBSD_image.png" width="354" height="245">&lt;/p>
+&lt;p>Select where you would like install FreeBSD&lt;/p>
+&lt;figure class="image">
+ &lt;img src="https://jeakob.github.io/blog/3_FreeBSD_image.png" width="354" height="245">
+&lt;/figure>
 &lt;p>After installing FreeBSD but before restarting, drop to a shell when offered to. Assuming your new boot key is &lt;code>da1&lt;/code>, clear whatever partitions you have first, then format it:&lt;/p>
 &lt;div class="highlight">&lt;pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;">&lt;code class="language-sh" data-lang="sh">&lt;span style="display:flex;">&lt;span>gpart destroy -F da1
 &lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span>gpart create -s GPT da1
