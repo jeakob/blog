@@ -6,7 +6,7 @@
 &lt;p>&lt;strong>Tip:&lt;/strong> It’s best to unplug all hard drives first.&lt;/p>&lt;/blockquote>
 &lt;blockquote>
 &lt;p>&lt;strong>Note:&lt;/strong> I recommend installing FreeBSD on the internal USB or microSD card.&lt;/p>&lt;/blockquote>
-&lt;figure class="image">&lt;img style="aspect-ratio:807/499;" src="https://jeakob.github.io/blog/1_FreeBSD_image.png" width="807" height="499">&lt;/figure>&lt;figure class="image">&lt;img style="aspect-ratio:802/653;" src="https://jeakob.github.io/blog/2_FreeBSD_image.png" width="802" height="653">&lt;/figure>
+&lt;figure class="image">&lt;img style="aspect-ratio:807/499;" src="https://jeakob.github.io/blog/1_FreeBSD_image.png" width="1200" height="499">&lt;/figure>&lt;figure class="image">&lt;img style="aspect-ratio:802/653;" src="https://jeakob.github.io/blog/2_FreeBSD_image.png" width="1200" height="653">&lt;/figure>
 &lt;figure class="image">&lt;img style="aspect-ratio:354/245;" src="https://jeakob.github.io/blog/3_FreeBSD_image.png" width="354" height="245">&lt;/figure>
 &lt;p>After installing FreeBSD but before restarting, drop to a shell when offered to. Assuming your new boot key is &lt;code>da1&lt;/code>, clear whatever partitions you have first, then format it:&lt;/p>
 &lt;div class="highlight">&lt;pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;">&lt;code class="language-sh" data-lang="sh">&lt;span style="display:flex;">&lt;span>gpart destroy -F da1
@@ -33,6 +33,6 @@
 &lt;p>The main drawback is that if you add additional internal drives later, you’ll need to update the boot loader with the new address. If you forget, you can always boot from the FreeBSD installer and drop to a shell to update it again. In practice, though, most people already have all the drive bays populated, which is largely the point of these small systems.&lt;/p>
 &lt;p>If your MicroServer still refuses to boot—as one of mine did—try connecting the bootable USB stick to one of the external USB 2.0 ports instead. One of my units may have a flaky internal port, but this workaround worked fine on another system here, as well as on the unit I keep at my dad’s place, which I’ve just realised I forgot to include in my homelab post.&lt;/p>
 &lt;h3 id="boot-screenshot">Boot Screenshot:&lt;/h3>
-&lt;figure class="image">&lt;img style="aspect-ratio:1047/661;" src="https://jeakob.github.io/blog/4_FreeBSD_image.png" width="1047" height="661">&lt;/figure>
+&lt;figure class="image">&lt;img style="aspect-ratio:1047/661;" src="https://jeakob.github.io/blog/4_FreeBSD_image.png" width="1200" height="661">&lt;/figure>
 &lt;h4 id="after-a-couple-of-seconds-you-will-see-grub">After a couple of seconds, you will see GRUB:&lt;/h4>
-&lt;figure class="image">&lt;img style="aspect-ratio:1046/650;" src="https://jeakob.github.io/blog/FreeBSD_image.png" width="1046" height="650">&lt;/figure></description></item></channel></rss>
+&lt;figure class="image">&lt;img style="aspect-ratio:1046/650;" src="https://jeakob.github.io/blog/FreeBSD_image.png" width="1200" height="650">&lt;/figure></description></item></channel></rss>
