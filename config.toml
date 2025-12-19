@@ -1,6 +1,6 @@
 baseURL = 'https://jeakob.github.io/blog/'
 languageCode = 'en-us'
-title = 'jeakob'
+title = 'Problem Solver Blog'
 theme = "unix"
 pagination.pagerSize = 5
 pluralizelisttitles = false
