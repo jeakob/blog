@@ -1,4 +1,4 @@
-<?xml version="1.0" encoding="utf-8" standalone="yes"?><rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom"><channel><title>jeakob</title><link>https://jeakob.github.io/blog/</link><description>Recent content on jeakob</description><generator>Hugo</generator><language>en-us</language><lastBuildDate>Thu, 18 Dec 2025 22:00:00 +0000</lastBuildDate><atom:link href="https://jeakob.github.io/blog/index.xml" rel="self" type="application/rss+xml"/><item><title># Dynamic Resolution Setup for Alpine Linux on UTM (macOS M1/M2/M3)</title><link>https://jeakob.github.io/blog/posts/utm-alpine-resolution/</link><pubDate>Thu, 18 Dec 2025 22:00:00 +0000</pubDate><guid>https://jeakob.github.io/blog/posts/utm-alpine-resolution/</guid><description>&lt;p>This guide explains how to enable automatic resolution changes for Alpine Linux with LXQt running in UTM on Apple Silicon Macs.&lt;/p>
+<?xml version="1.0" encoding="utf-8" standalone="yes"?><rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom"><channel><title>Utm on jeakob</title><link>https://jeakob.github.io/blog/tags/utm/</link><description>Recent content in Utm on jeakob</description><generator>Hugo</generator><language>en-us</language><lastBuildDate>Thu, 18 Dec 2025 22:00:00 +0000</lastBuildDate><atom:link href="https://jeakob.github.io/blog/tags/utm/index.xml" rel="self" type="application/rss+xml"/><item><title># Dynamic Resolution Setup for Alpine Linux on UTM (macOS M1/M2/M3)</title><link>https://jeakob.github.io/blog/posts/utm-alpine-resolution/</link><pubDate>Thu, 18 Dec 2025 22:00:00 +0000</pubDate><guid>https://jeakob.github.io/blog/posts/utm-alpine-resolution/</guid><description>&lt;p>This guide explains how to enable automatic resolution changes for Alpine Linux with LXQt running in UTM on Apple Silicon Macs.&lt;/p>
 &lt;h2 id="the-problem">The Problem&lt;/h2>
 &lt;p>When running Alpine Linux in UTM on Apple Silicon, resizing the UTM window doesn&amp;rsquo;t automatically adjust the guest display resolution. This is because the SPICE guest tools need to be properly configured.&lt;/p>
 &lt;h2 id="the-solution">The Solution&lt;/h2>
@@ -58,29 +58,4 @@
 &lt;li>&lt;strong>Backend&lt;/strong>: QEMU or Apple Virtualization Framework&lt;/li>
 &lt;/ul>
 &lt;hr>
-&lt;p>&lt;strong>Last Updated&lt;/strong>: December 19, 2025&lt;/p></description></item><item><title>Useful Sites</title><link>https://jeakob.github.io/blog/posts/useful-sites/</link><pubDate>Thu, 18 Dec 2025 10:00:00 +0000</pubDate><guid>https://jeakob.github.io/blog/posts/useful-sites/</guid><description>&lt;h1 id="a-list-of-useful-sites-that-i-have-come-across">A list of useful sites that I have come across:&lt;/h1>
-&lt;p>&lt;a href="https://networking-toolbox.as93.net">Networking Toolbox:&lt;/a>&lt;/p>
-&lt;img src="https://jeakob.github.io/blog/networking-toolbox.png" width="1267" height="679"></description></item><item><title>Alpine MOTD/Login Banner</title><link>https://jeakob.github.io/blog/posts/alpine-motd/</link><pubDate>Sun, 14 Dec 2025 10:00:00 -0700</pubDate><guid>https://jeakob.github.io/blog/posts/alpine-motd/</guid><description>&lt;h1 id="motdlogin-banner">MOTD/Login Banner&lt;/h1>
-&lt;p>Example:&lt;/p>
-&lt;img src="https://jeakob.github.io/blog/motd-login-banner.png" width="669" height="196">
-&lt;pre tabindex="0">&lt;code># Start blue
-echo -en &amp;#34;\033[1;34m&amp;#34; &amp;gt; /etc/motd
-# Blue text
-echo &amp;#34;Welcome to Alpine!&amp;#34; &amp;gt;&amp;gt; /etc/motd
-echo &amp;#34;&amp;#34; &amp;gt;&amp;gt; /etc/motd
-# Cyan text
-echo -en &amp;#34;\033[1;36m&amp;#34; &amp;gt;&amp;gt; /etc/motd
-echo &amp;#34;The Alpine Wiki contains a large amount of how-to guides and general&amp;#34; &amp;gt;&amp;gt; /etc/motd
-echo &amp;#34;information about administrating Alpine systems.&amp;#34; &amp;gt;&amp;gt; /etc/motd
-echo &amp;#34;See &amp;lt;https://wiki.alpinelinux.org/&amp;gt;.&amp;#34; &amp;gt;&amp;gt; /etc/motd
-echo &amp;#34;&amp;#34; &amp;gt;&amp;gt; /etc/motd
-# Yellow text
-echo -en &amp;#34;\033[1;33m&amp;#34; &amp;gt;&amp;gt; /etc/motd
-echo &amp;#34;You can setup the system with the command: setup-alpine&amp;#34; &amp;gt;&amp;gt; /etc/motd
-echo &amp;#34;&amp;#34; &amp;gt;&amp;gt; /etc/motd
-# Red text for your folder warning
-echo -en &amp;#34;\033[1;31m&amp;#34; &amp;gt;&amp;gt; /etc/motd
-echo &amp;#34;All files are stored here: cd /root/&amp;#34; &amp;gt;&amp;gt; /etc/motd
-# Reset to default
-echo -en &amp;#34;\033[0m&amp;#34; &amp;gt;&amp;gt; /etc/motd
-&lt;/code>&lt;/pre></description></item><item><title>About</title><link>https://jeakob.github.io/blog/about/about/</link><pubDate>Fri, 12 Dec 2025 00:00:00 +0000</pubDate><guid>https://jeakob.github.io/blog/about/about/</guid><description>&lt;p>This blog will soon contain a lot of information about my current projects, guides and fixes.&lt;/p></description></item></channel></rss>
+&lt;p>&lt;strong>Last Updated&lt;/strong>: December 19, 2025&lt;/p></description></item></channel></rss>
