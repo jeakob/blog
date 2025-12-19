@@ -70,7 +70,7 @@ If your MicroServer still refuses to boot—as one of mine did—try connecting 
 
 ### Boot Screenshot:
 
-<figure class="image"><img style="aspect-ratio:1047/661;" src="/blog/4_FreeBSD_image.png" width="1200" height="661"></figure>
+<figure class="image"><img style="aspect-ratio:1200/661;" src="/blog/4_FreeBSD_image.png" width="1200" height="661"></figure>
 
 #### After a couple of seconds, you will see GRUB:
 
