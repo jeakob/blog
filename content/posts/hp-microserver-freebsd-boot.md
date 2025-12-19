@@ -27,7 +27,7 @@ I recommend to install FreeBSD on the internal USB or micro SD card
 
 After installing FreeBSD but before restarting, drop to a shell when offered to. Assuming your new boot key is `da1`, clear whatever partitions you have first, then format it:
 
-```plain
+```sh
 # gpart destroy -F da1
 # gpart create -s GPT da1
 
@@ -35,14 +35,14 @@ After installing FreeBSD but before restarting, drop to a shell when offered to.
 
 ### Install the bootloader:
 
-```plain
+```sh
 # gpart bootcode -b /boot/boot0 da1
 
 ```
 
 Assuming all four LFF drive bays are populated, configure the bootloader to use the fifth drive (the SSD) and set it as the default boot option:
 
-```plain
+```sh
 # boot0cfg -Bv -o setdrv -d 0x84 -s 5 da1
 
 ```
@@ -57,7 +57,7 @@ Assuming all four LFF drive bays are populated, configure the bootloader to use 
 
 The flags are:
 
-```plain
+```sh
 -B         install FreeBSD's boot0 manager
 -v         like my blog, be verbose
 -o setdrv  refer to the disk by BIOS drive number
